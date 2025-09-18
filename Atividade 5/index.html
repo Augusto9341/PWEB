@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIV Responsivo com Media Queries</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Garantir que não há pseudo-elementos interferindo */
+        #color-name::after { content: "" !important; display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 id="color-name">Verde</h2>
+        <div class="responsive-div"></div>
+    </div>
+
+    <script>
+        function updateColorAndText() {
+            const colorName = document.getElementById('color-name');
+            const div = document.querySelector('.responsive-div');
+            const width = window.innerWidth;
+            
+            if (width <= 420) {
+                colorName.textContent = 'Cinza';
+                div.style.backgroundColor = '#9E9E9E';
+                div.style.width = '300px';
+                div.style.height = '300px';
+            } else if (width <= 768) {
+                colorName.textContent = 'Laranja';
+                div.style.backgroundColor = '#FF9800';
+                div.style.width = '500px';
+                div.style.height = '500px';
+            } else if (width <= 1024) {
+                colorName.textContent = 'Magenta';
+                div.style.backgroundColor = '#E91E63';
+                div.style.width = '500px';
+                div.style.height = '500px';
+            } else if (width <= 1080) {
+                colorName.textContent = 'Vermelho';
+                div.style.backgroundColor = '#F44336';
+                div.style.width = '500px';
+                div.style.height = '500px';
+            } else if (width <= 1366) {
+                colorName.textContent = 'Roxo';
+                div.style.backgroundColor = '#9C27B0';
+                div.style.width = '500px';
+                div.style.height = '500px';
+            } else if (width <= 1920) {
+                colorName.textContent = 'Amarelo';
+                div.style.backgroundColor = '#FFEB3B';
+                div.style.width = '500px';
+                div.style.height = '500px';
+            } else {
+                colorName.textContent = 'Verde';
+                div.style.backgroundColor = '#4CAF50';
+                div.style.width = '500px';
+                div.style.height = '500px';
+            }
+        }
+
+        // Atualizar ao carregar a página
+        updateColorAndText();
+        
+        // Atualizar ao redimensionar a janela
+        window.addEventListener('resize', updateColorAndText);
+    </script>
+</body>
+</html>
+

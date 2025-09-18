@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.responsive-div {
+    width: 500px;
+    height: 500px;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #4CAF50; /* Verde por padrão */
+}
+
+/* Media Queries baseadas na imagem */
+
+/* Até 420px: Cinza */
+@media (max-width: 420px) {
+    .responsive-div {
+        background-color: #9E9E9E;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Entre 421px e 768px: Laranja */
+@media (min-width: 421px) and (max-width: 768px) {
+    .responsive-div {
+        background-color: #FF9800;
+    }
+}
+
+/* Entre 769px e 1024px: Magenta */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .responsive-div {
+        background-color: #E91E63;
+    }
+}
+
+/* Entre 1025px e 1080px: Vermelho */
+@media (min-width: 1025px) and (max-width: 1080px) {
+    .responsive-div {
+        background-color: #F44336;
+    }
+}
+
+/* Entre 1081px e 1366px: Roxo */
+@media (min-width: 1081px) and (max-width: 1366px) {
+    .responsive-div {
+        background-color: #9C27B0;
+    }
+}
+
+/* Entre 1367px e 1920px: Amarelo */
+@media (min-width: 1367px) and (max-width: 1920px) {
+    .responsive-div {
+        background-color: #FFEB3B;
+    }
+}
+
+/* Maior que 1920px: Verde */
+@media (min-width: 1921px) {
+    .responsive-div {
+        background-color: #4CAF50;
+    }
+}
+
