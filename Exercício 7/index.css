@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.escolhas {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.resultado {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultado p {
+    font-size: 1.3em;
+    color: #333;
+    font-weight: bold;
+}
+
+.resultado.vitoria {
+    background: #4caf50;
+    color: white;
+}
+
+.resultado.vitoria p {
+    color: white;
+}
+
+.resultado.derrota {
+    background: #f44336;
+    color: white;
+}
+
+.resultado.derrota p {
+    color: white;
+}
+
+.resultado.empate {
+    background: #ff9800;
+    color: white;
+}
+
+.resultado.empate p {
+    color: white;
+}
+
+.detalhes {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.placar {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.placar div {
+    text-align: center;
+}
+
+.placar h3 {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.placar p {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #667eea;
+}

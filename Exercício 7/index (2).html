@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel ou Tesoura</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pedra, Papel ou Tesoura</h1>
+        
+        <div class="escolhas">
+            <button class="btn" data-escolha="pedra">🪨 Pedra</button>
+            <button class="btn" data-escolha="papel">📄 Papel</button>
+            <button class="btn" data-escolha="tesoura">✂️ Tesoura</button>
+        </div>
+
+        <div id="resultado" class="resultado">
+            <p>Faça sua escolha para começar!</p>
+        </div>
+
+        <div id="detalhes" class="detalhes"></div>
+
+        <div class="placar">
+            <div>
+                <h3>Você</h3>
+                <p id="placar-jogador">0</p>
+            </div>
+            <div>
+                <h3>Computador</h3>
+                <p id="placar-computador">0</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
